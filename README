@@ -1,0 +1,64 @@
+libpthread-stubs
+------------------------------------------
+This library provides weak aliases for pthread functions not provided in libc
+or otherwise available by default.  Libraries like libxcb rely on pthread
+stubs to use pthreads optionally, becoming thread-safe when linked to
+libpthread, while avoiding any performance hit when running single-threaded.
+libpthread-stubs supports this behavior even on platforms which do not supply
+all the necessary pthread stubs.
+
+On platforms which already supply all the necessary pthread stubs, this
+package ships only the pkg-config file pthread-stubs.pc, to allow
+libraries to unconditionally express a dependency on pthread-stubs and
+still obtain correct behavior.
+
+Build requirements:
+  cygwin-1.5.22-1
+  autoconf2.5-2.60-1
+  automake1.9-1.9.6-1
+  binutils-20060817-1
+  cygport-0.2.6-1
+  gawk-3.1.5-2
+  gcc-core-3.4.4-1
+  libtool1.5-1.5.23a-1
+  make-3.81-1
+  sed-4.1.5-1
+
+Canonical website:
+  http://xcb.freedesktop.org/
+
+Canonical download:
+  http://xcb.freedesktop.org/dist/
+
+-------------------------------------------
+
+Build instructions:
+  unpack libpthread-stubs-0.1-X-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./libpthread-stubs-0.1-X.cygport all
+
+This will create:
+  /usr/src/libpthread-stubs-0.1-X-src.tar.bz2
+  /usr/src/libpthread-stubs-0.1-X.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary package:
+
+  /usr/lib/pkgconfig/pthread-stubs.pc
+  /usr/share/doc/Cygwin/libpthread-stubs-0.1.README
+  /usr/share/doc/libpthread-stubs-0.1/COPYING
+  /usr/share/doc/libpthread-stubs-0.1/README
+
+------------------
+
+Port Notes:
+
+----- version 0.1-1 -----
+Initial Cygwin release for X11R7.2.
+
+
+Cygwin port maintained by:
+http://cygwinports.dotsrc.org/
