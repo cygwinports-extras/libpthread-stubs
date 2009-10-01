@@ -1,5 +1,4 @@
 category: Libs
-requires: cygwin
 sdesc: "pthread stubs pkg-config metadata"
 ldesc: "This library provides weak aliases for pthread functions not
 provided in libc or otherwise available by default.  Libraries like

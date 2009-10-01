@@ -13,16 +13,16 @@ libraries to unconditionally express a dependency on pthread-stubs and
 still obtain correct behavior.
 
 Build requirements:
-  cygwin-1.5.22-1
-  autoconf2.5-2.60-1
-  automake1.9-1.9.6-1
-  binutils-20060817-1
-  cygport-0.2.6-1
-  gawk-3.1.5-2
-  gcc-core-3.4.4-1
-  libtool1.5-1.5.23a-1
-  make-3.81-1
-  sed-4.1.5-1
+  cygwin-1.7.0-61
+  autoconf2.5-2.63-10
+  automake1.11-1.11-10
+  binutils-2.19.51-1
+  cygport-0.9.9-1
+  gawk-3.1.7-1
+  gcc4-core-4.3.2-2
+  libtool-2.2.7a-14
+  make-3.81-2
+  sed-4.1.5-2
 
 Canonical website:
   http://xcb.freedesktop.org/
@@ -33,28 +33,31 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack libpthread-stubs-0.1-X-src.tar.bz2
+  unpack libpthread-stubs-0.2-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./libpthread-stubs-0.1-X.cygport all
+  cygport ./libpthread-stubs-0.2-X.cygport all
 
 This will create:
-  /usr/src/libpthread-stubs-0.1-X-src.tar.bz2
-  /usr/src/libpthread-stubs-0.1-X.tar.bz2
+  /usr/src/libpthread-stubs-0.2-X-src.tar.bz2
+  /usr/src/libpthread-stubs-0.2-X.tar.bz2
 
 -------------------------------------------
 
 Files included in the binary package:
 
   /usr/lib/pkgconfig/pthread-stubs.pc
-  /usr/share/doc/Cygwin/libpthread-stubs-0.1.README
-  /usr/share/doc/libpthread-stubs-0.1/COPYING
-  /usr/share/doc/libpthread-stubs-0.1/README
+  /usr/share/doc/Cygwin/libpthread-stubs.README
+  /usr/share/doc/libpthread-stubs/COPYING
+  /usr/share/doc/libpthread-stubs/README
 
 ------------------
 
 Port Notes:
+
+----- version 0.2-1 -----
+Version bump for X11R7.5.
 
 ----- version 0.1-1 -----
 Initial Cygwin release for X11R7.2.
