@@ -1,6 +1,9 @@
-category: Libs
-sdesc: "pthread stubs pkg-config metadata"
-ldesc: "This library provides weak aliases for pthread functions not
+NAME="libpthread-stubs"
+VERSION=0.2
+RELEASE=1
+CATEGORY="Libs"
+SUMMARY="pthread stubs pkg-config metadata"
+DESCRIPTION="This library provides weak aliases for pthread functions not
 provided in libc or otherwise available by default.  Libraries like
 libxcb rely on pthread stubs to use pthreads optionally, becoming
 thread-safe when linked to libpthread, while avoiding any performance
@@ -12,3 +15,5 @@ On platforms which already supply all the necessary pthread stubs, this
 package ships only the pkg-config file pthread-stubs.pc, to allow
 libraries to unconditionally express a dependency on pthread-stubs and
 still obtain correct behavior."
+HOMEPAGE="http://xcb.sourceforge.net/"
+SRC_URI="http://xcb.freedesktop.org/dist/libpthread-stubs-${VERSION}.tar.bz2"
